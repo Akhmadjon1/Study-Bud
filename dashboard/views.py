@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from . forms import *
 from django.contrib import messages
+from django.views import generic
 
 # Create your views here.
 def home(request):
@@ -23,3 +24,12 @@ def notes(request):
 def delete_note(request,pk=None):
     Notes.objects.get(id=pk).delete()
     return redirect("notes")
+
+class NotesDetailView(generic.DetailView):
+    model = Notes
+    
+
+def homework(request):
+    homework = Homework.objects.filter(user=request.user)
+    context = {'homeworks':homework}
+    return render(request, 'dashboard/homework.html',context)
