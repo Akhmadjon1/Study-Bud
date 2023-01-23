@@ -118,3 +118,10 @@ def youtube(request):
         form = DashboardForm()
     context = {'form':form}
     return render(request,"dashboard/youtube.html",context)
+
+def todo(request):
+    todo = Todo.objects.filter(user=request.user)
+    context = {
+        'todos':todo
+    }
+    return render(request,"dashboard/todo.html",context)
