@@ -257,3 +257,11 @@ def wiki(request):
             'form':form
       }
     return render(request,"dashboard/wiki.html",context)
+
+def conversion(request):
+    form = ConversionForm()
+    context = {
+        'form':form,
+        'input':False
+    }
+    return render(request,"dashboard/conversion.html",context)
