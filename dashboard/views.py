@@ -323,7 +323,7 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request,f'Account Created for {username}!')
-            #redirect('login')
+            return redirect('login')
     else:
         form = UserRegistrationForm()
     context = {
