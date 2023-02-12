@@ -11,7 +11,7 @@ urlpatterns = [
   path('update_homework/<int:pk>',views.update_homework,name="update-homework"),
   path('delete_homework/<int:pk>',views.delete_homework,name="delete-homework"),
   
-  path('youtube',views.youtube,name="yutube"),
+  path('youtube',views.youtube,name="youtube"),
   
   path('todo',views.todo,name="todo"),
   path('update_todo/<int:pk>',views.update_todo,name="update-todo"),
@@ -21,7 +21,7 @@ urlpatterns = [
 
   path('dictionary',views.dictionary,name="dictionary"),
   
-    path('wiki',views.wiki,name="wiki"),
+  path('wiki',views.wiki,name="wiki"),
     
-    path('conversion',views.conversion,name="conversion"),
+  path('conversion',views.conversion,name="conversion"),
 ]
