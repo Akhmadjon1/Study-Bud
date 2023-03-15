@@ -6,4 +6,3 @@
 - User sign-up, sign-in, sign-out.
 - User authentication.
 - 8 sections available.
-- Easy to use.
